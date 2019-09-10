@@ -1,14 +1,21 @@
-import {Component, OnInit} from "@angular/core"
+import {Component, Input, OnInit} from '@angular/core'
+import {RestaurantModel} from '../restaurants/restaurant/restaurant.model';
+import {RestaurantsService} from "../restaurants/restaurants.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
-  selector: 'mt-header',
-  templateUrl: './header.component.html'
+  selector: 'mt-restaurant-detail',
+  templateUrl: './restaurant-detail.component.html'
 })
-export class HeaderComponent implements OnInit {
+export class RestaurantDetailComponent implements OnInit {
 
-  constructor() { }
+  @Input() restaurant: RestaurantModel
+  
+  constructor(private restaurantsService: RestaurantsService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.restaurantsService.restaurantById(this.route.snapshot.params['id'])
+      .subscribe(restaurant => this.restaurant = restaurant)
   }
 
 }

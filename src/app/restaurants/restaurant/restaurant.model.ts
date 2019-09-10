@@ -6,5 +6,7 @@ export interface RestaurantModel {
   deliveryEstimate: string
   rating: number
   imagePath: string
+  about: string
+  hours: string
 
 }

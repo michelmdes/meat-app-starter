@@ -1,14 +1,19 @@
 import {Component, OnInit} from "@angular/core"
+import {Observable} from "rxjs";
+import {RestaurantsService} from "../../restaurants/restaurants.service";
 
 @Component({
-  selector: 'mt-menu',
-  templateUrl: './menu.component.html'
+  selector: 'mt-reviews',
+  templateUrl: './reviews.component.html'
 })
-export class MenuComponent implements OnInit {
+export class ReviewsComponent implements OnInit {
 
-  constructor() { }
+  reviews: Observable<any>
+
+  constructor(private restaurantsService: RestaurantsService) { }
 
   ngOnInit() {
+    //this.restaurantsService.
   }
 
 }

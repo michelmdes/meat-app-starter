@@ -1,10 +1,10 @@
 import {Component, OnInit} from "@angular/core"
 
 @Component({
-  selector: 'mt-menu',
-  templateUrl: './menu.component.html'
+  selector: 'mt-shopping-cart',
+  templateUrl: './shopping-cart.component.html'
 })
-export class MenuComponent implements OnInit {
+export class ShoppingCartComponent implements OnInit {
 
   constructor() { }
 
