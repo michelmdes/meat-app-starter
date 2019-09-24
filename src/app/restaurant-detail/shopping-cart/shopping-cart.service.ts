@@ -20,7 +20,7 @@ export class ShoppingCartService {
   }
 
   removeItem(item: CartItem) {
-    this.items.slice(this.items.indexOf(item), 1);
+    this.items.splice(this.items.indexOf(item), 1);
   }
 
   total(): number {
