@@ -22,6 +22,7 @@ import {ShoppingCartService} from './restaurant-detail/shopping-cart/shopping-ca
 import {OrderComponent} from './order/order.component';
 import {FormsModule} from '@angular/forms';
 import {InputContainerComponent} from './shared/input-container/input-container.component';
+import {RadioPaymentComponent} from './shared/radio-payment/radio-payment.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import {InputContainerComponent} from './shared/input-container/input-container.
     ShoppingCartComponent,
     ReviewsComponent,
     OrderComponent,
-    InputContainerComponent
+    InputContainerComponent,
+    RadioPaymentComponent
   ],
   imports: [
     BrowserModule,
