@@ -26,6 +26,7 @@ import {RadioPaymentComponent} from './shared/radio-payment/radio-payment.compon
 import {OrderItemsComponent} from './order/order-items/order-items.component';
 import {OrderService} from './order/order.service';
 import {DeliveryCostsComponent} from './order/delivery-costs/delivery-costs.component';
+import {OrderSummaryComponent} from './order-summary/order-summary.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import {DeliveryCostsComponent} from './order/delivery-costs/delivery-costs.comp
     InputContainerComponent,
     RadioPaymentComponent,
     OrderItemsComponent,
-    DeliveryCostsComponent
+    DeliveryCostsComponent,
+    OrderSummaryComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,12 @@ import {DeliveryCostsComponent} from './order/delivery-costs/delivery-costs.comp
     RouterModule.forRoot(ROUTES),
     FormsModule
   ],
-  providers: [RestaurantsService, ShoppingCartService, OrderService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [
+    RestaurantsService,
+    ShoppingCartService,
+    OrderService,
+    {provide: LOCALE_ID, useValue: 'pt-BR'}
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
