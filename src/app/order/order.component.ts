@@ -36,5 +36,12 @@ export class OrderComponent implements OnInit {
     this.orderService.removeItem(item);
   }
 
+  totalItems(): number {
+    return this.orderService.totalItems();
+  }
+
+  deliveryCost(): number {
+    return 10;
+  }
 
 }
